@@ -1,6 +1,6 @@
 # The Aria-MIDI Dataset
 
-[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [Blog](https://loubbrad.com/blog/ariamidi) 
+[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [Huggingface](https://huggingface.co/datasets/loubb/aria-midi) / [Blog](https://loubbrad.com/blog/ariamidi) / 
 
 The Aria-MIDI dataset is a collection of 1,186,253 MIDI files, comprising approximately 100,629 hours of transcribed solo-piano recordings, with metadata in categories including genre, composer, performer, as well as compositional identifiers. We developed Aria-MIDI to serve as a dataset for pre-training generative music models, and are releasing it with the goal of facilitating open research in music information retrieval and generative modelling for symbolic music.
 
@@ -46,7 +46,7 @@ Metadata was extracted from textual information associated with each original au
 
 ## Citation/License
 
-Aria-MIDI is distributed with the [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license. By accessing this dataset, you declare that you agree to our [disclaimer](https://github.com/loubbrad/aria-midi/blob/main/disclaimer.md). If you use the dataset, or any of the components in our data-pipeline, please cite the paper in which they were introduced:
+Aria-MIDI is distributed with the [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license. By accessing this dataset, you declare that you agree to our [disclaimer](https://github.com/loubbrad/aria-midi/blob/main/DISCLAIMER.md). If you use the dataset, or any of the components in our data-pipeline, please cite the paper in which they were introduced:
 
 ```
 @inproceedings{bradshawaria,
