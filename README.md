@@ -1,8 +1,10 @@
 # The Aria-MIDI Dataset
 
-[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [Huggingface](https://huggingface.co/datasets/loubb/aria-midi) / [Blog](https://loubbrad.com/blog/ariamidi) 
+[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [Huggingface](https://huggingface.co/datasets/loubb/aria-midi)
 
 The Aria-MIDI dataset is a collection of 1,186,253 MIDI files, comprising approximately 100,629 hours of transcribed solo-piano recordings, with metadata in categories including genre, composer, performer, as well as compositional identifiers. We developed Aria-MIDI to serve as a dataset for pre-training generative music models, and are releasing it with the goal of facilitating open research in music information retrieval and generative modelling for symbolic music.
+
+<span style="color:red; font-weight:bold;">NOTE: For applications to generative modeling, it's highly recommended to use the <span style="color:yellow;">pruned</span> subset which has been filtered and post-processed accordingly.</span>
 
 ## Download (V1)
 
@@ -11,7 +13,7 @@ Along with the full dataset, we provide several subsets which may be appropriate
 | Subset        | # Files   | Deduplication[^1] | Pre-processing filters[^2]        | Example Application                    |
 |---------------|-----------|--------------------|------------------------------------|----------------------------------------|
 | Full [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-ext.tar.gz?download=true)]       | 1,186,253 | No                 | None                               | Data analysis                          |
-| Pruned [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-pruned-ext.tar.gz?download=true)]     | 820,944   | 10                 | Light                              | Foundation model pre-training          |
+| <span style="color:yellow;">Pruned</span> [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-pruned-ext.tar.gz?download=true)]     | 820,944   | 10                 | Light                              | Foundation model pre-training          |
 | Deduped [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-deduped-ext.tar.gz?download=true)]    | 371,053   | 1                  | Heavy                              | Generative modelling                   |
 | Unique [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-unique-ext.tar.gz?download=true)]     | 32,522    | 1                  | Compositional metadata[^3]         | Composition fingerprints               |
 
