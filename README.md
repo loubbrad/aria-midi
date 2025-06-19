@@ -1,10 +1,10 @@
 # The Aria-MIDI Dataset
 
-[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [Huggingface](https://huggingface.co/datasets/loubb/aria-midi)
+[Paper](https://openreview.net/pdf?id=X5hrhgndxW) / [HuggingFace](https://huggingface.co/datasets/loubb/aria-midi)
 
-The Aria-MIDI dataset is a collection of 1,186,253 MIDI files, comprising approximately 100,629 hours of transcribed solo-piano recordings, with metadata in categories including genre, composer, performer, as well as compositional identifiers. We developed Aria-MIDI to serve as a dataset for pre-training generative music models, and are releasing it with the goal of facilitating open research in music information retrieval and generative modelling for symbolic music.
+The Aria-MIDI dataset is a collection of 1,186,253 MIDI files, comprising approximately 100,629 hours of transcribed solo-piano recordings, with metadata in categories including genre, composer, performer, as well as compositional identifiers. We developed Aria-MIDI to serve as a dataset for pre-training generative music models, and are releasing it with the goal of facilitating open research in music information retrieval and generative modeling for symbolic music.
 
-❗ **NOTE:** For applications to generative modeling, it's highly recommended to use the **pruned** subset which has been filtered and post-processed accordingly.
+❗ **NOTE:** NOTE: For applications to generative modeling, it's highly recommended to use the **pruned** subset which has been filtered and post-processed accordingly, which was used to pre-train [Aria](https://github.com/EleutherAI/aria).
 
 ## Download (V1)
 
@@ -14,12 +14,14 @@ Along with the full dataset, we provide several subsets which may be appropriate
 |---------------|-----------|--------------------|------------------------------------|----------------------------------------|
 | Full [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-ext.tar.gz?download=true)]       | 1,186,253 | No                 | None                               | Data analysis                          |
 | **Pruned** [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-pruned-ext.tar.gz?download=true)]     | 820,944   | 10                 | Light                              | Foundation model pre-training          |
-| Deduped [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-deduped-ext.tar.gz?download=true)]    | 371,053   | 1                  | Heavy                              | Generative modelling                   |
+| Deduped [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-deduped-ext.tar.gz?download=true)]    | 371,053   | 1                  | Heavy                              | Generative modeling                   |
 | Unique [[download](https://huggingface.co/datasets/loubb/aria-midi/resolve/main/aria-midi-v1-unique-ext.tar.gz?download=true)]     | 32,522    | 1                  | Compositional metadata[^3]         | Composition fingerprints               |
 
 [^1]: For popular composers, we retain at most *X* instances for each opus/piece-number pair and discard files lacking compositional identifiers.  
 [^2]: Heuristic-based filtering, considering note density, pitch and duration entropy, silence, number of segments, and indicators of repetitive content, to exclude problematic entries.  
 [^3]: Exclude all files lacking exact compositional identifiers.
+
+The specific pre-processing filters we employed can be reproduced using utilities in the [aria-utils](https://github.com/EleutherAI/aria-utils) library. We provide the exact settings as JSON files: [light](https://huggingface.co/datasets/loubb/aria-midi/blob/main/light-preprocess.json) and [heavy](https://huggingface.co/datasets/loubb/aria-midi/blob/main/heavy-preprocess.json).
 
 ## Dataset
 
