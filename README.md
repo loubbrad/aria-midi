@@ -4,7 +4,7 @@
 
 The Aria-MIDI dataset is a collection of 1,186,253 MIDI files, comprising approximately 100,629 hours of transcribed solo-piano recordings, with metadata in categories including genre, composer, performer, as well as compositional identifiers. We developed Aria-MIDI to serve as a dataset for pre-training generative music models, and are releasing it with the goal of facilitating open research in music information retrieval and generative modeling for symbolic music.
 
-❗ **NOTE:** NOTE: For applications to generative modeling, it's highly recommended to use the **pruned** subset which has been filtered and post-processed accordingly, which was used to pre-train [Aria](https://github.com/EleutherAI/aria).
+❗ **NOTE:** For applications to generative modeling, it's highly recommended to use the **pruned** subset which has been filtered and post-processed accordingly, which was used to pre-train [Aria](https://github.com/EleutherAI/aria).
 
 ## Download (V1)
 
